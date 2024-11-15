@@ -1,3 +1,4 @@
 <?php
 
-phpinfo();
+$app = require __DIR__ . '/../src/App/bootstrap.php';
+$app->run();
