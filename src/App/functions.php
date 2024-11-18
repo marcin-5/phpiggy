@@ -9,3 +9,8 @@ function dd(mixed $value): void
     echo "</pre>";
     die();
 }
+
+function e(mixed $value): string
+{
+    return htmlspecialchars((string)$value, ENT_QUOTES);
+}
