@@ -18,6 +18,8 @@ class HomeController
 
     public function home(): void
     {
-        $this->view->render("/index.php");
+        $this->view->render("/index.php", [
+            'title' => 'Home page',
+        ]);
     }
 }
