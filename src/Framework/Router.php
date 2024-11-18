@@ -8,12 +8,13 @@ class Router
 {
     private array $routes = [];
 
-    public function addRoute(string $method, string $path): void
+    public function addRoute(string $method, string $path, array $controller): void
     {
         $path = $this->normalizePath($path);
         $this->routes[] = [
             'path' => $path,
             'method' => strtoupper($method),
+            'controller' => $controller,
         ];
     }
 
