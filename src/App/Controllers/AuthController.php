@@ -11,7 +11,7 @@ class AuthController
 {
     public function __construct(
         private TemplateEngine $view,
-        private ValidatorService $validator
+        private ValidatorService $validatorService,
     ) {
     }
 
@@ -22,6 +22,6 @@ class AuthController
 
     public function register(): void
     {
-        dd($_POST);
+        $this->validatorService->validateRegister($_POST);
     }
 }
