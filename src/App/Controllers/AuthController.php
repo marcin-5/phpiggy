@@ -12,7 +12,7 @@ class AuthController
     {
     }
 
-    public function register(): void
+    public function registerView(): void
     {
         echo $this->view->render("/register.php");
     }
